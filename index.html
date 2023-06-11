@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1::before{
+        content: "Age-";
+    }
+    h1::after{
+        content: "-Pore";
+    }
+    .btn{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .click{
+        text-decoration: none;
+        font-size: 50px;
+        background:#090580;
+        color: #ffffff;
+        display: inline-block;
+        padding: 15px 40px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+      
+    }
+    .click::before{
+        content: "";
+        background-color:tomato;
+        border-radius: 10px;
+        height:0;
+        width: 100%;
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+      transition: .4s;
+        
+
+    }
+    .click:hover::before{
+        height: 100%;
+    }
+</style>
+<body>
+    <h1>This is After Before</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit aspernatur reiciendis ipsa, laborum nemo error, deserunt alias dolorum cumque sit incidunt, in quos dicta earum dolore expedita accusantium ut sapiente!</p>
+    <div class="btn">
+    <a class="click" href="">click</a>
+    </div>
+</body>
+</html>
